@@ -1,0 +1,19 @@
+<h1>Bienvenue sur la page d'accueil !</h1>
+<a routerLink="/contact" class="nav-link"><i class="fas fa-arrow-right"></i>Aller sur la page de contact</a>
+<a routerLink="/todo" class="nav-link"><i class="fas fa-arrow-right"></i>Aller sur la page de to-do list</a>
+<!-- Boucle For :
+<div *ngFor="let item of items; let i=index"></div>
+Affichage conditionnel :
+<div *ngIf="maCondition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Contenu 1</ng-template>
+<ng-template #elseBlock>Contenu 2</ng-template>
+Texte conditionnel :
+<button type="button">
+{{ maCondition ? 'Texte 1' : 'Texte 2' }}
+</button> -->
+
+<!-- Appel d’une fonction :
+<button type="button" (click)="maFonction()">Ajouter</button>
+Ajout d’une variable “binded” à un élément :
+<input [(ngModel)]="maVariable" type="text" name="txt"/>
+Note : vous devez importez le “FormsModule” dans app.module.ts pour l’utiliser avec des input['type=text']: -->

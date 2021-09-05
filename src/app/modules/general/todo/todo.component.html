@@ -1,0 +1,26 @@
+<h1>Bienvenue sur la page de To-Do List !</h1>
+
+  <input type="text" [(ngModel)]="inputTask"/>
+  <button (click)="addTask()" class="btn btn-success">Ajouter</button>
+
+  <table *ngIf="tasks.length > 0">
+      <tr *ngFor="let task of tasks; index as key;">
+
+        <td *ngIf="task.checked; else elseBlock">
+          <i class="fas fa-thumbtack fa-rotate-90"></i>
+          <s>{{ key + 1 }}. {{ task.title }}</s>
+        </td>
+        <ng-template #elseBlock>
+          <td>
+            <i class="fas fa-thumbtack"></i>
+            {{ key + 1 }}. {{ task.title }}
+          </td>
+        </ng-template>
+        <td>
+          <a (click)="checkTask(key)" class="btn btn-success">Complété</a>
+          <a (click)="removeTask(key)" class="btn btn-danger">Supprimer</a>
+        </td>
+      </tr>
+  </table>
+
+<a routerLink="/home" class="nav-link"><i class="fas fa-arrow-left"></i>Retourner sur la page d'accueil</a>
